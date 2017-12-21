@@ -12,14 +12,14 @@ env:
   - IDEA_VERSION=2017.3.1
   - #intentionally blank; absence of IDEA_VERSION env var means sandbox will use latest EAP snapshot
 
-#install:
-#- ./gradlew --version
-#- ./gradlew jar testClasses
-#
-#script:
-#- jdk_switcher use ${TEST_JRE}
-#- ./gradlew --version
-#- ./gradlew check
+install:
+- ./gradlew assemble -is
+
+script:
+- ./gradlew check -is
+
+before_cache:
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 
 cache:
   directories:
