@@ -1,0 +1,10 @@
+import org.jetbrains.intellij.IntelliJPlugin
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
+
+intellij {
+  plugins project(':plugin')
+  version System.getenv().getOrDefault('IDEA_VERSION', IntelliJPlugin.DEFAULT_IDEA_VERSION) //pivot tests based on this env var
+}

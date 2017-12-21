@@ -1,0 +1,3 @@
+rootProject.name = 'gradle-intellij-pivot'
+
+include 'plugin', 'test'

@@ -1,0 +1,27 @@
+language: java
+
+jdk:
+  - openjdk8
+
+env:
+  global: 
+    - TERM=dumb
+  matrix:
+  - IDEA_VERSION=15.0.6
+  - IDEA_VERSION=2016.3.1
+  - IDEA_VERSION=2017.3.1
+  - #intentionally blank; absence of IDEA_VERSION env var means sandbox will use latest EAP snapshot
+
+#install:
+#- ./gradlew --version
+#- ./gradlew jar testClasses
+#
+#script:
+#- jdk_switcher use ${TEST_JRE}
+#- ./gradlew --version
+#- ./gradlew check
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/modules-2/
+    - $HOME/.gradle/wrapper/

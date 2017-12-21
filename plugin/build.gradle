@@ -1,0 +1,4 @@
+intellij {
+  pluginName project.name
+  version '2017.3.1' //always build plugin with this hard-coded version
+}
